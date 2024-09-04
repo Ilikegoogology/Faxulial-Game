@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faxulial Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #display {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="display">200! - faxul</div>
+    <button onclick="changeNumber()">Click to Change</button>
+
+    <script>
+        const steps = [
+            { number: '200!', label: 'faxul' },
+            { number: '200!^2', label: 'Kilofaxul' },
+            { number: '200!^3', label: 'megafaxul' },
+            { number: '200!^4', label: 'Gigafaxul' },
+            { number: '200!^5', label: 'Terafaxul' },
+            { number: '200!^6', label: 'Pentafaxul' },
+            { number: '200!^7', label: 'Exafaxul' },
+            { number: '200!^8', label: 'Zettafaxul' },
+            { number: '200!^9', label: 'Yottaxul' },
+            { number: '200!^10', label: 'Brontofaxul' },
+            { number: '200!^11', label: 'Gogofaxul' },
+            { number: '200!^12', label: 'Gagafaxul' },
+            { number: '200!^13', label: 'Tergigafaxul' },
+            { number: '200!^14', label: 'Penthigafaxul' },
+            { number: '200!^15', label: 'Hexafaxul' },
+            { number: '200(!^200!+1)', label: 'Grand Faxul' },
+            { number: '200(!^200!^2 +1)', label: 'grand Kilofaxul' },
+            { number: '200(!^200!^3 +1)', label: 'grand megafaxul' },
+            { number: '200(!^200!^4 +1)', label: 'grand gigafaxul' },
+            { number: '200(!^200!^5 +1)', label: 'grand Terafaxul' },
+            { number: '200(!^200!^6 +1)', label: 'grand pentafaxul' },
+            { number: '200(!^200!^7 +1)', label: 'grand exafaxul' },
+            { number: '200(!^200!^8 +1)', label: 'grand zettafaxul' },
+            { number: '200(!^200!^9 +1)', label: 'grand yottaxul' },
+            { number: '200(!^200!^10 +1)', label: 'grand brontofaxul' },
+            { number: '200(!^200!^11 +1)', label: 'grand gogofaxul' },
+            { number: '200(!^200!^12 +1)', label: 'grand gagafaxul' },
+            { number: '200(!^200!^13 +1)', label: 'grand tergigafaxul' },
+            { number: '200(!^200!^14 +1)', label: 'grand penthigafaxul' },
+            { number: '200(!^200!^15 +1)', label: 'grand hexafaxul' },
+            { number: '200(!^200!^200(!^200!^2 +1) +1)', label: 'bigrand faxul' }
+        ];
+        let currentStep = 0;
+
+        function changeNumber() {
+            currentStep = (currentStep + 1) % steps.length;
+            const display = document.getElementById('display');
+            display.textContent = `${steps[currentStep].number} - ${steps[currentStep].label}`;
+        }
+    </script>
+</body>
+</html>
